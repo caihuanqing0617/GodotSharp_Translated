@@ -1,4 +1,4 @@
-# Godot CSharp RunTime Help Document To Other Language
+# Godot CSharp RunTime Document To Other Language
 
 Godot C# 运行库的帮助文档的大语言模型的翻译到其它国家的语言
 
