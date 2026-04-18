@@ -1,4 +1,4 @@
-# Godot CSharp RunTime Document To Other Language
+# GodotSharp RunTime ❤ Document To Other Language ❤
 
 <div align="center">
 
@@ -11,6 +11,36 @@
 
 ---
 
-Please Wait...
+Довідка для середовища виконання Godot C#, перекладена за допомогою великої мовної моделі для інших країн
 
 ---
+
+## Вступ
+
+- На основі середовища виконання Godot C# можна перекладати довідкову документацію, щоб у режимі реального часу переглядати опис використання функцій і способи їх виклику рідною мовою.
+
+## Інструкція з використання
+
+- Знайдіть відповідну мову та версію
+
+- Наприклад:
+
+1. У поточному Git-каталозі знайдіть папку `Chinese`
+
+2. Знайдіть відповідну версію, наприклад `v4.6.1 v2`
+
+3. Знайдіть `GodotSharp.?.xml` і `GodotSharpEditor.?.xml`
+
+4. Скопіюйте до:
+    - У Windows:
+        1. `C:\\Users\\ім'я_користувача\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\`
+        2. `C:\\Users\\ім'я_користувача\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\`
+    - На Mac або Linux:
+        1. `/Users/ім'я_користувача/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
+        2. `/Users/ім'я_користувача/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
+
+5. Створіть резервну копію `GodotSharp.xml` і `GodotSharpEditor.xml`, а потім видаліть їх
+
+6. Перейменуйте знайдені `GodotSharp.?.xml` на `GodotSharp.xml`, а `GodotSharpEditor.?.xml` на `GodotSharpEditor.xml`, після чого скопіюйте їх до цієї директорії
+
+7. Готово. Після цього відкрийте свій проєкт, і ви зможете побачити відповідну вам мову
