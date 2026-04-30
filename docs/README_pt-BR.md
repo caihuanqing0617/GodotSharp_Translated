@@ -21,6 +21,18 @@ Documentação de ajuda do runtime Godot C#, traduzida para outros países com u
 
 ## Instruções de uso
 
+### Clonar este projeto com Git
+
+- No sistema Windows:
+    1. Execute `./Run.bat` na raiz deste projeto
+    2. Siga as instruções, escolhendo passo a passo e depois execute
+    3. Concluído
+
+- No sistema Mac ou Linux:
+    1. Aguarde...
+
+### Ou
+
 - Encontre o idioma e a versão correspondentes
 
 - Por exemplo:

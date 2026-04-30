@@ -21,6 +21,18 @@ Help documentation for the Godot C# runtime, translated to other countries using
 
 ## Instructions
 
+### Git Clone This Project
+
+- On Windows:
+    1. Run `./Run.bat` from the root directory of this project
+    2. Follow the prompts step by step, then execute
+    3. Done
+
+- On Mac or Linux:
+    1. Wait...
+
+### Or
+
 - Find the corresponding language and version.
 
 - For example:

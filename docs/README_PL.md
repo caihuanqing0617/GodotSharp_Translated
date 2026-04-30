@@ -21,6 +21,18 @@ Dokumentacja pomocy dla środowiska uruchomieniowego Godot C#, przetłumaczona n
 
 ## Instrukcja użycia
 
+### Sklonuj ten projekt za pomocą Git
+
+- W systemie Windows:
+    1. Uruchom `./Run.bat` w katalogu głównym tego projektu
+    2. Postępuj zgodnie z instrukcjami, wybierając krok po kroku, a następnie uruchom
+    3. Gotowe
+
+- W systemie Mac lub Linux:
+    1. Czekaj...
+
+### Albo
+
 - Znajdź odpowiedni język i wersję
 
 - Na przykład:
