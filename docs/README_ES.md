@@ -36,8 +36,8 @@ Documentación de ayuda del runtime C# de Godot, traducida a otros países media
         1. `C:\\Users\\tu_nombre_de_usuario\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\`
         2. `C:\\Users\\tu_nombre_de_usuario\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\`
     - En Mac o Linux:
-        1. `/Users/tu_nombre_de_usuario/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
-        2. `/Users/tu_nombre_de_usuario/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
+        1. `~/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
+        2. `~/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
 
 5. Haz una copia de seguridad de `GodotSharp.xml` y `GodotSharpEditor.xml` y elimínalos.
 

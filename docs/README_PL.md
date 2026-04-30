@@ -36,8 +36,8 @@ Dokumentacja pomocy dla środowiska uruchomieniowego Godot C#, przetłumaczona n
         1. `C:\\Users\\twoja_nazwa_użytkownika\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\`
         2. `C:\\Users\\twoja_nazwa_użytkownika\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\`
     - W systemie Mac lub Linux:
-        1. `/Users/twoja_nazwa_użytkownika/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
-        2. `/Users/twoja_nazwa_użytkownika/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
+        1. `~/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
+        2. `~/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
 
 5. Utwórz kopię zapasową plików `GodotSharp.xml` i `GodotSharpEditor.xml`, a następnie je usuń
 

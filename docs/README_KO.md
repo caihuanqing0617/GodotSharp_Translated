@@ -36,8 +36,8 @@ Godot C# 런타임의 도움말 문서, 대규모 언어 모델을 사용하여 
         1. `C:\\Users\\사용자이름\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\`
         2. `C:\\Users\\사용자이름\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\`
     - Mac 또는 Linux 시스템의 경우:
-        1. `/Users/사용자이름/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
-        2. `/Users/사용자이름/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
+        1. `~/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
+        2. `~/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
 
 5. `GodotSharp.xml` 및 `GodotSharpEditor.xml`을 백업한 뒤 삭제합니다.
 

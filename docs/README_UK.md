@@ -36,8 +36,8 @@
         1. `C:\\Users\\ім'я_користувача\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\`
         2. `C:\\Users\\ім'я_користувача\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\`
     - На Mac або Linux:
-        1. `/Users/ім'я_користувача/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
-        2. `/Users/ім'я_користувача/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
+        1. `~/.nuget/packages/godotsharp/4.6.1/lib/net8.0/`
+        2. `~/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/`
 
 5. Створіть резервну копію `GodotSharp.xml` і `GodotSharpEditor.xml`, а потім видаліть їх
 

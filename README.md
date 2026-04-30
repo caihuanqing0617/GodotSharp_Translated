@@ -48,8 +48,8 @@ Godot C#运行库的帮助文档，用大语言模型翻译到其它国家
         1. C:\\Users\\你的用户名\\.nuget\\packages\\godotsharp\\4.6.1\\lib\\net8.0\\
         2. C:\\Users\\你的用户名\\.nuget\\packages\\godotsharpeditor\\4.6.1\\lib\\net8.0\\
     - 在 Mac 或 Linux 系统下:
-        1. /Users/你的用户名/.nuget/packages/godotsharp/4.6.1/lib/net8.0/
-        2. /Users/你的用户名/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/
+        1. ~/.nuget/packages/godotsharp/4.6.1/lib/net8.0/
+        2. ~/.nuget/packages/godotsharpeditor/4.6.1/lib/net8.0/
 
 5. 备份你的 GodotSharp.xml 和 GodotSharpEditor.xml 且删除
 
