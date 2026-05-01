@@ -39,15 +39,44 @@ goto godotVersion
 
 
 :languageOption
+
+set "GodotSharpOriginalFile=%USERPROFILE%\.nuget\packages\godotsharp\%GodotVersion%\lib\%NetFramework%\GodotSharp.xml"
+set "GodotSharpEnglishFile=%USERPROFILE%\.nuget\packages\godotsharp\%GodotVersion%\lib\%NetFramework%\GodotSharp.English.xml"
+
+set "GodotSharpEditorOriginalFile=%USERPROFILE%\.nuget\packages\godotsharpeditor\%GodotVersion%\lib\%NetFramework%\GodotSharpEditor.xml"
+set "GodotSharpEditorEnglishFile=%USERPROFILE%\.nuget\packages\godotsharpeditor\%GodotVersion%\lib\%NetFramework%\GodotSharpEditor.English.xml"
+
+IF NOT EXIST "%GodotSharpEnglishFile%" (
+	IF EXIST "%GodotSharpOriginalFile%" (
+		copy %GodotSharpOriginalFile% %GodotSharpEnglishFile%
+	) else (
+		echo The file was not found as: "%GodotSharpOriginalFile%"
+		pause
+		exit
+	)
+)
+
+IF NOT EXIST "%GodotSharpEditorEnglishFile%" (
+	IF EXIST "%GodotSharpEditorOriginalFile%" (
+		copy %GodotSharpEditorOriginalFile% %GodotSharpEditorEnglishFile%
+	) else (
+		echo The file was not found as: "%GodotSharpEditorOriginalFile%"
+		pause
+		exit
+	)
+)
+
 cls
+
 echo =========================
 echo      Language Option
 echo =========================
 echo 1. bilingual
 echo 2. monolingual
+echo 0. Regain (English)
 echo ======================
 
-set /p "choice=Please select a language option...(1-2): "
+set /p "choice=Please select a language option...(1-2|0): "
 
 if "%choice%"=="1" (
 	set "LanguageOption=Bilingual."
@@ -57,6 +86,10 @@ if "%choice%"=="1" (
 if "%choice%"=="2" (
 	set "LanguageOption="
 	goto language
+)
+
+if "%choice%"=="0" (
+	goto regainLanguage
 )
 
 cls
@@ -69,92 +102,86 @@ cls
 echo ===========================
 echo      Select A Language
 echo ===========================
-echo 1. 语言 (zh-CN)
-echo 2. 語言 (zh-TW)
-echo 3. 言語 (Jp)
-echo 4. 언어 (Ko)
-echo 5. língua (pt-BR)
-echo 6. язык (Ru)
-echo 7. lengua (Es)
-echo 8. langue (Fr)
-echo 9. Sprache (De)
-echo a. lingua (It)
-echo b. jazyk (Cs)
-echo c. język (Pl)
-echo d. мова (Uk)
-echo 0. Regain (English)
+echo 1.  语言 (zh-CN)
+echo 2.  語言 (zh-TW)
+echo 3.  言語 (Jp)
+echo 4.  언어 (Ko)
+echo 5.  língua (pt-BR)
+echo 6.  язык (Ru)
+echo 7.  lengua (Es)
+echo 8.  langue (Fr)
+echo 9.  Sprache (De)
+echo 10. lingua (It)
+echo 11. jazyk (Cs)
+echo 12. język (Pl)
+echo 13. мова (Uk)
 echo ======================
 
-set /p "choice=Please select a language...(1-9 | a-d | 0): "
+set /p "choice=Please select a language...(1-13): "
 
 if "%choice%"=="1" (
 	set "SelectLanguage=zh-CN"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="2" (
 	set "SelectLanguage=zh-TW"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="3" (
 	set "SelectLanguage=Jp"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="4" (
 	set "SelectLanguage=Ko"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="5" (
 	set "SelectLanguage=pt-BR"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="6" (
 	set "SelectLanguage=Ru"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="7" (
 	set "SelectLanguage=Es"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="8" (
 	set "SelectLanguage=Fr"
-    	goto selectEnd
+	goto selectEnd
 )
 
 if "%choice%"=="9" (
 	set "SelectLanguage=De"
-    	goto selectEnd
+	goto selectEnd
 )
 
-if "%choice%"=="a" (
+if "%choice%"=="10" (
 	set "SelectLanguage=It"
-    	goto selectEnd
+	goto selectEnd
 )
 
-if "%choice%"=="b" (
+if "%choice%"=="11" (
 	set "SelectLanguage=Cs"
-    	goto selectEnd
+	goto selectEnd
 )
 
-if "%choice%"=="c" (
+if "%choice%"=="12" (
 	set "SelectLanguage=Pl"
-    	goto selectEnd
+	goto selectEnd
 )
 
-if "%choice%"=="d" (
+if "%choice%"=="13" (
 	set "SelectLanguage=Uk"
-    	goto selectEnd
-)
-
-if "%choice%"=="0" (
-	set "SelectLanguage=English"
-    	goto selectEnd
+	goto selectEnd
 )
 
 cls
@@ -163,55 +190,40 @@ pause
 goto language
 
 :selectEnd
-set "GodotSharpOriginalFile=%USERPROFILE%\.nuget\packages\godotsharp\%GodotVersion%\lib\%NetFramework%\GodotSharp.xml"
-set "GodotSharpEnglishFile=%USERPROFILE%\.nuget\packages\godotsharp\%GodotVersion%\lib\%NetFramework%\GodotSharp.English.xml"
-
-set "GodotSharpEditorOriginalFile=%USERPROFILE%\.nuget\packages\godotsharpeditor\%GodotVersion%\lib\%NetFramework%\GodotSharpEditor.xml"
-set "GodotSharpEditorEnglishFile=%USERPROFILE%\.nuget\packages\godotsharpeditor\%GodotVersion%\lib\%NetFramework%\GodotSharpEditor.English.xml"
 
 set "GodotSharpFilePath=.\%SelectLanguage%\v%GodotVersion%\GodotSharp.%LanguageOption%%SelectLanguage%.xml"
 set "GodotSharpEditorFilePath=.\%SelectLanguage%\v%GodotVersion%\GodotSharpEditor.%LanguageOption%%SelectLanguage%.xml"
 
-IF NOT EXIST "%GodotSharpEnglishFile%" (
-	IF EXIST "%GodotSharpOriginalFile%" (
-		copy %GodotSharpOriginalFile% %GodotSharpEnglishFile%
-	) else (
-		echo The file was not found as: "%GodotSharpOriginalFile%"
-	)
-)
-
-IF NOT EXIST "%GodotSharpEditorEnglishFile%" (
-	IF EXIST "%GodotSharpEditorOriginalFile%" (
-		copy %GodotSharpEditorOriginalFile% %GodotSharpEditorEnglishFile%
-	) else (
-		echo The file was not found as: "%GodotSharpEditorOriginalFile%"
-	)
-)
-
-IF "%SelectLanguage%"=="English" (
-	IF EXIST "%GodotSharpEnglishFile%" (
-		copy %GodotSharpEnglishFile% %GodotSharpOriginalFile%
-	) else (
-		echo The file was not found as: "%GodotSharpEnglishFile%"
-	)
-	
-	IF  EXIST "%GodotSharpEditorEnglishFile%" (
-		copy %GodotSharpEditorEnglishFile% %GodotSharpEditorOriginalFile%
-	) else (
-		echo The file was not found as: "%GodotSharpEditorEnglishFile%"
-	)
+IF EXIST "%GodotSharpFilePath%" (
+	copy %GodotSharpFilePath% %GodotSharpOriginalFile%
 ) else (
-	IF EXIST "%GodotSharpFilePath%" (
-		copy %GodotSharpFilePath% %GodotSharpOriginalFile%
-	) else (
-		echo The file was not found as: "%GodotSharpFilePath%"
-	)
-
-	IF EXIST "%GodotSharpEditorFilePath%" (
-		copy %GodotSharpEditorFilePath% %GodotSharpEditorOriginalFile%
-	) else (
-		echo The file was not found as: "%GodotSharpEditorFilePath%"
-	)
+	echo The file was not found as: "%GodotSharpFilePath%"
 )
 
+IF EXIST "%GodotSharpEditorFilePath%" (
+	copy %GodotSharpEditorFilePath% %GodotSharpEditorOriginalFile%
+) else (
+	echo The file was not found as: "%GodotSharpEditorFilePath%"
+)
+
+echo language done.
 pause
+exit
+
+:regainLanguage
+
+IF EXIST "%GodotSharpEnglishFile%" (
+	copy %GodotSharpEnglishFile% %GodotSharpOriginalFile%
+) else (
+	echo The file was not found as: "%GodotSharpEnglishFile%"
+)
+	
+IF  EXIST "%GodotSharpEditorEnglishFile%" (
+	copy %GodotSharpEditorEnglishFile% %GodotSharpEditorOriginalFile%
+) else (
+	echo The file was not found as: "%GodotSharpEditorEnglishFile%"
+)
+
+echo regain done.
+pause
+exit
