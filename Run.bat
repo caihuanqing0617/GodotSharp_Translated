@@ -173,28 +173,44 @@ set "GodotSharpFilePath=.\%SelectLanguage%\v%GodotVersion%\GodotSharp.%LanguageO
 set "GodotSharpEditorFilePath=.\%SelectLanguage%\v%GodotVersion%\GodotSharpEditor.%LanguageOption%%SelectLanguage%.xml"
 
 IF NOT EXIST "%GodotSharpEnglishFile%" (
-	copy %GodotSharpOriginalFile% %GodotSharpEnglishFile%
+	IF EXIST "%GodotSharpOriginalFile%" (
+		copy %GodotSharpOriginalFile% %GodotSharpEnglishFile%
+	) else (
+		echo The file was not found as: "%GodotSharpOriginalFile%"
+	)
 )
 
 IF NOT EXIST "%GodotSharpEditorEnglishFile%" (
-	copy %GodotSharpEditorOriginalFile% %GodotSharpEditorEnglishFile%
+	IF EXIST "%GodotSharpEditorOriginalFile%" (
+		copy %GodotSharpEditorOriginalFile% %GodotSharpEditorEnglishFile%
+	) else (
+		echo The file was not found as: "%GodotSharpEditorOriginalFile%"
+	)
 )
 
 IF "%SelectLanguage%"=="English" (
 	IF EXIST "%GodotSharpEnglishFile%" (
 		copy %GodotSharpEnglishFile% %GodotSharpOriginalFile%
+	) else (
+		echo The file was not found as: "%GodotSharpEnglishFile%"
 	)
 	
 	IF  EXIST "%GodotSharpEditorEnglishFile%" (
 		copy %GodotSharpEditorEnglishFile% %GodotSharpEditorOriginalFile%
+	) else (
+		echo The file was not found as: "%GodotSharpEditorEnglishFile%"
 	)
-) else ( 
+) else (
 	IF EXIST "%GodotSharpFilePath%" (
 		copy %GodotSharpFilePath% %GodotSharpOriginalFile%
+	) else (
+		echo The file was not found as: "%GodotSharpFilePath%"
 	)
 
 	IF EXIST "%GodotSharpEditorFilePath%" (
 		copy %GodotSharpEditorFilePath% %GodotSharpEditorOriginalFile%
+	) else (
+		echo The file was not found as: "%GodotSharpEditorFilePath%"
 	)
 )
 
