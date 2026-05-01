@@ -181,15 +181,20 @@ IF NOT EXIST "%GodotSharpEditorEnglishFile%" (
 )
 
 IF "%SelectLanguage%"=="English" (
-	copy %GodotSharpEnglishFile% %GodotSharpOriginalFile%
-	copy %GodotSharpEditorEnglishFile% %GodotSharpEditorOriginalFile%
+	IF EXIST "%GodotSharpEnglishFile%" (
+		copy %GodotSharpEnglishFile% %GodotSharpOriginalFile%
+	)
+	
+	IF  EXIST "%GodotSharpEditorEnglishFile%" (
+		copy %GodotSharpEditorEnglishFile% %GodotSharpEditorOriginalFile%
+	)
 ) else ( 
 	IF EXIST "%GodotSharpFilePath%" (
-	copy %GodotSharpFilePath% %GodotSharpOriginalFile%
+		copy %GodotSharpFilePath% %GodotSharpOriginalFile%
 	)
 
 	IF EXIST "%GodotSharpEditorFilePath%" (
-	copy %GodotSharpEditorFilePath% %GodotSharpEditorOriginalFile%
+		copy %GodotSharpEditorFilePath% %GodotSharpEditorOriginalFile%
 	)
 )
 
