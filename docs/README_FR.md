@@ -29,7 +29,9 @@ Documentation d’aide du runtime C# de Godot, traduite vers d’autres langues 
     3. Terminé
 
 - Sous Mac ou Linux :
-    1. En attente...
+    1. Exécutez `./Run.sh` à la racine de ce projet
+    2. Suivez les instructions, choisissez étape par étape, puis exécutez
+    3. Terminé
 
 ### Ou bien
 

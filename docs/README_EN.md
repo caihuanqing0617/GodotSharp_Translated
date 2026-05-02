@@ -29,7 +29,9 @@ Help documentation for the Godot C# runtime, translated to other countries using
     3. Done
 
 - On Mac or Linux:
-    1. Wait...
+    1. Run `./Run.sh` from the root directory of this project
+    2. Follow the prompts step by step, then execute
+    3. Done
 
 ### Or
 

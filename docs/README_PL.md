@@ -29,7 +29,9 @@ Dokumentacja pomocy dla środowiska uruchomieniowego Godot C#, przetłumaczona n
     3. Gotowe
 
 - W systemie Mac lub Linux:
-    1. Czekaj...
+    1. Uruchom `./Run.sh` w katalogu głównym tego projektu
+    2. Postępuj zgodnie z instrukcjami, wybierając krok po kroku, a następnie uruchom
+    3. Gotowe
 
 ### Albo
 

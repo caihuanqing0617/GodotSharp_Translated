@@ -29,7 +29,9 @@ Hilfedokumentation für die Godot-C#-Laufzeitumgebung, mithilfe eines großen Sp
     3. Fertig
 
 - Unter Mac oder Linux:
-    1. Bitte warten...
+    1. Führen Sie `./Run.sh` im Stammverzeichnis dieses Projekts aus
+    2. Wählen Sie den Anweisungen entsprechend Schritt für Schritt aus und führen Sie es dann aus
+    3. Fertig
 
 ### Oder
 

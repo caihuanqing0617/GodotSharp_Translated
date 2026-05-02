@@ -29,7 +29,9 @@ Dokumentace nápovědy pro runtime Godot C#, přeložená do jiných zemí pomoc
     3. Hotovo
 
 - V systému Mac nebo Linux:
-    1. Čekejte...
+    1. Spusťte `./Run.sh` v kořenovém adresáři tohoto projektu
+    2. Postupujte podle pokynů krok za krokem a poté spusťte
+    3. Hotovo
 
 ### Nebo
 
